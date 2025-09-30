@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratorio 7 - HTML y CSS - Taller de Programación">
+    <meta name="author" content="Eva Chino">
+    <title>Laboratorio 7 - HTML y CSS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Laboratorio 7 — HTML y CSS</h1>
+            <button id="themeToggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i> Modo Oscuro
+            </button>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#objetivo">Objetivo</a></li>
+                    <li><a href="#etiquetas">Etiquetas HTML</a></li>
+                    <li><a href="#ejemplo">Ejemplo HTML</a></li>
+                    <li><a href="#uab">Página UAB</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Navegación entre páginas" class="page-nav">
+                <a href="index.html">Inicio</a> |
+                <a href="formulario.html">Formulario</a> |
+                <a href="tabla.html">Tabla</a> |
+                <a href="login.html">Login</a> |
+                <a href="card.html">Card (tarea)</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container">
+            <section id="uab" class="uab-page">
+                <img src="logoUAB.png" alt="UAB Logo" style="max-width: 100%; height: auto;">
+                <h2>Ingeniería de Sistemas</h2>
+                <h3>Materia: Taller de Programación</h3>
+
+                <h2>Mi primera página web</h2>
+
+                <p>Estudiante: Eva Lizeth Chino Quispe</p>
+                <p>Fecha: Septiembre 2025</p>
+                <p>Ciudad - País</p>
+                <p>Año: 2025</p>
+
+                <h2>Lista de materias</h2>
+                <ul>
+                    <li>Matemáticas</li>
+                    <li>Programación</li>
+                    <li>Algoritmos</li>
+                </ul>
+
+                <h2>Pasos para entregar el laboratorio</h2>
+                <ol>
+                    <li>Crear repositorio en GitHub</li>
+                    <li>Escribir el código HTML</li>
+                    <li>Agregar estilos CSS</li>
+                    <li>Subir archivos al repositorio</li>
+                </ol>
+
+                <p><strong>Texto en negritas</strong></p>
+                <p><em>Texto en cursivas</em></p>
+                <p><u>Texto subrayado</u></p>
+                <p><mark>Texto resaltado</mark></p>
+                <p><small>Texto pequeño</small></p>
+                <p>Texto con superíndice <sup>2</sup></p>
+                <p>Texto con subíndice <sub>2</sub></p>
+                <a href="https://www.google.com/">Texto de enlace</a>
+            </section>
+
+            <section id="objetivo" class="card">
+                <h2>Objetivo del laboratorio</h2>
+                <p>Crear páginas web básicas usando HTML y CSS. Aprender y practicar las etiquetas HTML básicas (texto, listas, enlaces, tablas) y aplicar estilos con CSS.</p>
+                <h3>Prerrequisitos:</h3>
+                <ul>
+                    <li>Tener una cuenta de GitHub</li>
+                    <li>Instalar Visual Studio Code</li>
+                    <li>Navegador Web</li>
+                </ul>
+            </section>
+
+            <section id="etiquetas" class="card">
+                <h2>¿Para qué sirven las siguientes etiquetas?</h2>
+                <dl class="definition-list">
+                    <div class="def-item">
+                        <dt>&lt;!DOCTYPE html&gt;</dt>
+                        <dd>Indica que el documento utiliza HTML5 y obliga al navegador a renderizar en modo estándar.</dd>
+                    </div>
+                    
+                    <div class="def-item">
+                        <dt>&lt;html&gt;</dt>
+                        <dd>Elemento raíz del documento. El atributo <code>lang="es"</code> indica el idioma principal.</dd>
+                    </div>
+                    
+                    <div class="def-item">
+                        <dt>&lt;head&gt;</dt>
+                        <dd>Contiene metadatos (por ejemplo: <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>), enlaces a CSS y scripts.</dd>
+                    </div>
+                    
+                    <div class="def-item">
+                        <dt>&lt;meta&gt;</dt>
+                        <dd>Proporciona metadatos como <code>charset</code> (juego de caracteres) o <code>viewport</code> (para diseño responsive).</dd>
+                    </div>
+                    
+                    <div class="def-item">
+                        <dt>&lt;title&gt;</dt>
+                        <dd>Título de la página que aparece en la pestaña del navegador y en resultados de búsqueda.</dd>
+                    </div>
+                    
+                    <div class="def-item">
+                        <dt>&lt;body&gt;</dt>
+                        <dd>Contenido visible de la página: texto, imágenes, tablas, formularios, etc.</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="ejemplo" class="card">
+                <h2>Ejemplo: código HTML que puedes colocar dentro de &lt;body&gt;</h2>
+                <p>Este bloque es el ejemplo que la guía sugiere incluir para probar las etiquetas básicas.</p>
+
+                <article class="demo-content">
+                    <h3>Ejemplo de contenido</h3>
+                    <p>Este es un <strong>párrafo</strong> de ejemplo. Prueba <em>etiquetas</em> como <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code> y <code>&lt;a&gt;</code>.</p>
+
+                    <h4>Lista no ordenada</h4>
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                    </ul>
+
+                    <h4>Lista ordenada</h4>
+                    <ol>
+                        <li>Paso uno</li>
+                        <li>Paso dos</li>
+                        <li>Paso tres</li>
+                    </ol>
+
+                    <p>Enlace de ejemplo: <a href="https://github.com" target="_blank" rel="noopener">Visitar GitHub</a></p>
+
+                    <figure>
+                        <img src="https://via.placeholder.com/800x220?text=Laboratorio+7" alt="Imagen de ejemplo para Laboratorio 7">
+                        <figcaption>Figura: imagen placeholder (ejemplo).</figcaption>
+                    </figure>
+                </article>
+                <h3>Instrucción de la práctica</h3>
+                <p>Abre este archivo en el navegador y toma una captura de pantalla de la página (como pide la guía). Adjunta la captura en tu entrega.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>Autor: Eva Chino — Taller de Programación — 2025</p>
+            <p>Universidad Adventista de Bolivia</p>
+        </div>
+    </footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (!themeToggle) return;
+
+            const isDark = localStorage.getItem('darkMode') === 'true';
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isNowDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isNowDark);
+                themeToggle.innerHTML = isNowDark 
+                    ? '<i class="fas fa-sun"></i> Modo Claro'
+                    : '<i class="fas fa-moon"></i> Modo Oscuro';
+            });
+        });
+    </script>
+    <footer>
+            <div class="footer-content">
+                <p><i class="fas fa-info-circle"></i> Este sistema de index es parte del Laboratorio 7 de Programación con html y css.</p>
+                <p>© 2025 Universidad Adventista de Bolivia - Facultad de Ingeniería </p>
+            </div>
+        </footer>
+</body>
+</html>
+ 

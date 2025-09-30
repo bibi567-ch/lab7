@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabla de ejemplo - Laboratorio 7">
+    <title>Tabla - Laboratorio 7</title>
+    <link rel="stylesheet" href="tabla-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tabla de Estudiantes</h1>
+            <button id="themeToggle" class="theme-toggle-btn">
+                <i class="fas fa-moon"></i> Modo Oscuro
+            </button>
+            <p>Tabla con información de estudiantes de Ingeniería</p>
+        </header>
+
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Carrera</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Eva Lizeth</td>
+                        <td>Chino</td>
+                        <td>20</td>
+                        <td>Ingeniería de Sistemas</td>
+                        <td>eva.chino@uab.edu.bo</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Juan Carlos</td>
+                        <td>Pérez</td>
+                        <td>22</td>
+                        <td>Ingeniería Civil</td>
+                        <td>juan.perez@uab.edu.bo</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>María Fernanda</td>
+                        <td>López</td>
+                        <td>21</td>
+                        <td>Ingeniería Industrial</td>
+                        <td>maria.lopez@uab.edu.bo</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Carlos Andrés</td>
+                        <td>Gutiérrez</td>
+                        <td>23</td>
+                        <td>Ingeniería de Sistemas</td>
+                        <td>carlos.gutierrez@uab.edu.bo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p><i class="fas fa-info-circle"></i> Esto es parte del  Laboratorio 7 de Programación con html y css.</p>
+                <p>© 2025 Universidad Adventista de Bolivia - Facultad de Ingeniería </p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (!themeToggle) return;
+
+            const isDark = localStorage.getItem('darkMode') === 'true';
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Modo Claro';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isNowDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isNowDark);
+                themeToggle.innerHTML = isNowDark 
+                    ? '<i class="fas fa-sun"></i> Modo Claro'
+                    : '<i class="fas fa-moon"></i> Modo Oscuro';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+:root {
+    --uab-blue: #003366;
+    --uab-blue-light: #0055aa;
+    --text-dark: #2d3748;
+    --text-light: #4a5568;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --gray-border: #e2e8f0;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-light: #121212;
+    --white: #1e1e1e;
+    --text-dark: #e0e0e0;
+    --text-light: #b0b0b0;
+    --gray-border: #333;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: min(100% - 32px, 1200px);
+    margin-inline: auto;
+}
+
+.site-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--uab-blue), var(--uab-blue-light));
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.site-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    transition: var(--transition);
+}
+
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.page-nav {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.main-content {
+    padding: 2rem 0;
+}
+
+.card, .uab-page {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-border);
+}
+
+.card h2, .uab-page h2 {
+    color: var(--uab-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--uab-blue-light);
+}
+
+.definition-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.def-item dt {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--uab-blue);
+    font-family: monospace;
+}
+
+.def-item dd {
+    margin-left: 1rem;
+    color: var(--text-light);
+}
+
+.demo-content {
+    background: #f9fbfd;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px dashed var(--uab-blue-light);
+    margin: 1.5rem 0;
+}
+
+.site-footer {
+    background: var(--uab-blue);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .site-header h1 { font-size: 1.5rem; }
+    .theme-toggle-btn { top: 12px; right: 12px; }
+    .nav-list { gap: 0.5rem; }
+    .card, .uab-page { padding: 1.2rem; }
+}
